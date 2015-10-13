@@ -12,12 +12,17 @@
 	<link rel="author" type="text/html" href="https://plus.google.com/+MuazKhan">
 
 	<link href="Style.css" rel="stylesheet">
+	<script type="text/javascript" src="pdfjs/pdf.js"></script>
+
+	<script type="text/javascript">
+	    PDFJS.workerSrc = "pdfjs/pdf.worker.js"
+	</script>
 </head>
 <body>
 	<section class="design-surface">
-		<canvas id="temp-canvas" style="position:absolute;z-index:2"></canvas>
-		<canvas id="pdf-canvas" style="position:absolute;left:50px;z-index:0"></canvas>
-		<canvas id="main-canvas" style="position:absolute;z-index:1"></canvas>
+		<canvas id="temp-canvas" ></canvas>
+		<canvas id="pdf-canvas" style="position:absolute;left:20%;top:30px;z-index:-1"></canvas>
+		<canvas id="main-canvas"></canvas>
 	</section>
 	
 	<!------------------------------------------>
@@ -203,3 +208,27 @@
     <!------------------------------------------>
 </body>
 </html>
+<script>
+	PDFJS.getDocument('test.pdf').then(function(pdf) {
+	  	// you can now use *pdf* here
+	  	console.log(pdf);
+	  	var pdfCount = pdf.numPages;
+	  	console.log(pdfCount);
+		pdf.getPage(1).then(function(page) {
+  		// you can now use *page* here
+  		var scale = 1.5;
+  		var viewport = page.getViewport(scale);
+
+  		var canvas = document.getElementById('pdf-canvas');
+  		var context = canvas.getContext('2d');
+  		canvas.height = viewport.height;
+  		canvas.width = viewport.width;
+
+  		var renderContext = {
+  		  canvasContext: context,
+  		  viewport: viewport
+  		};
+  		page.render(renderContext);
+		});
+	});
+</script>
