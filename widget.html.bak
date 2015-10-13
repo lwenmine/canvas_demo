@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -176,30 +176,30 @@
 	
 	<!------------------------------------------>
 
-	<script src="canvasjs/common.js"></script>
-	<script src="canvasjs/decorator.js"></script>
+	<script src="common.js"></script>
+	<script src="decorator.js"></script>
 	
-	<script src="canvasjs/draw-helper.js"></script>
-	<script src="canvasjs/drag-helper.js"></script>
+	<script src="draw-helper.js"></script>
+	<script src="drag-helper.js"></script>
 	
-    <script src="canvasjs/pencil-handler.js"></script>
-    <script src="canvasjs/eraser-handler.js"></script>
+    <script src="pencil-handler.js"></script>
+    <script src="eraser-handler.js"></script>
     <!-- <script src="clearall-handler.js"></script> -->
-    <script src="canvasjs/text-handler.js"></script>
-	<script src="canvasjs/arc-handler.js"></script>
-	<script src="canvasjs/line-handler.js"></script>
-	<script src="canvasjs/rect-handler.js"></script>
-	<script src="canvasjs/quadratic-handler.js"></script>
-	<script src="canvasjs/bezier-handler.js"></script>
+    <script src="text-handler.js"></script>
+	<script src="arc-handler.js"></script>
+	<script src="line-handler.js"></script>
+	<script src="rect-handler.js"></script>
+	<script src="quadratic-handler.js"></script>
+	<script src="bezier-handler.js"></script>
 
-	<script src="canvasjs/events-handler.js"></script>
+	<script src="events-handler.js"></script>
     
     <!------------------------------------------>
     
     <div id="fade"></div>
     
     <!------------------------------------------>
-    <script src="canvasjs/share-drawings.js"></script>
+    <script src="share-drawings.js"></script>
     <!------------------------------------------>
 </body>
 </html>
